@@ -1,0 +1,22 @@
+server:
+  port: 9100
+  servlet:
+    context-path: /application
+  
+spring:
+  application:
+    name: UserLogin
+    
+  datasource:  
+      username: root
+      password: password
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/users
+      
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      
+      
