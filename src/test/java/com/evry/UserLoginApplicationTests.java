@@ -17,21 +17,22 @@ class UserLoginApplicationTests {
 	@Test
 	void createUser() {
 		User user = new User();
-		user.setFirstName("sunil");
+		user.setFirstName("kumar");
 		user.setLastName("kala");
-		user.setEmail("s2@y.com");
-		user.setSex("male");
-		user.setPassword("test");
+		user.setEmail("s@y.c");
+		
+		user.setGender("male");
+		user.setPassword("test12");
 		
 		Address address = new Address();
-		address.setCity("abc");
-		address.setCode(123);
-		address.setStreet("cde");
-		address.setCountry("pk");
+		address.setCity("abcd");
+		address.setCode(1234);
+		address.setStreet("cddde");
+		address.setCountry("pkt");
 		user.setAddress(address);	
 		
 		repo.save(user);
-		
 	}
+	
 
 }

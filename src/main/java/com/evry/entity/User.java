@@ -9,32 +9,31 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name="user")
+@Table(name = "user")
 public class User {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-	
-	@Column(name="firstname")
+	private int id;
+
+	@Column(name = "firstname")
 	private String firstName;
-	
-	@Column(name="lastname")
+
+	@Column(name = "lastname")
 	private String lastName;
-	
-	@Column(name="sex")
-	private String sex;
-	
-	@Column(name="email")
+
+	@Column(name = "gender")
+	private String gender;
+
+	@Column(name = "email")
 	private String email;
-	
+
 	@Embedded
 	private Address address;
-	
-	@Column(name="password")
+
+	@Column(name = "password")
 	private String password;
-	
-		
+
 	public String getPassword() {
 		return password;
 	}
@@ -55,7 +54,7 @@ public class User {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -75,12 +74,12 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getSex() {
-		return sex;
+	public String getGender() {
+		return gender;
 	}
 
-	public void setSex(String sex) {
-		this.sex = sex;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getEmail() {
@@ -90,9 +89,5 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	
-	
-	
 
 }
