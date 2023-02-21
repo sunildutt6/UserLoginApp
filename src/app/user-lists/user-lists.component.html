@@ -1,0 +1,30 @@
+<h2>User Lists</h2>
+<table class="table table-striped">
+    <thead>
+      <tr>
+          <th scope="col">Id</th>
+       <th scope="col">FirstName</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Gender</th>
+         <th scope="col">Street</th>
+        <th scope="col">City</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr *ngFor="let u of users " >
+         <td>{{u.id}}</td>      
+        <td>{{u.firstName}}</td>
+        <td>{{u.lastName}}</td>
+        <td>{{u.gender}}</td>
+        <td>{{u.address.street}}</td> 
+         <td>{{u.address.city}}</td>
+        <td>
+          <button (click)="upDateUser(u.id)" class="btn btn-info">Update</button>
+          <button (click)="deleteUser(u.id)" class="btn btn-danger">Delete</button>
+          <button (click)="userDetails(u.id)" class="btn btn-success">Details</button>
+        </td>
+        </tr>
+    </tbody>
+  </table>
